@@ -1,16 +1,15 @@
 import React from "react";
 import "./App.css";
 import Sidebar from "./components/sidebar/Sidebar";
-import ServerNavbar from "./components/ServerNavbar/ServerNavbar";
+import Chatbox from "./components/chatbox/Chatbox";
 
 function App() {
   return (
-    <div className="App flex">
-      {/* <Sidebar /> */}
-      <ServerNavbar />
+    <div className="App">
+      <Sidebar />
+      <Chatbox />
     </div>
   );
 }
 
 export default App;
-// #202225
