@@ -5,32 +5,51 @@ import {
   HelpRounded,
   Notifications,
   PeopleAltRounded,
-  SearchRounded,
-  SendRounded,
 } from "@material-ui/icons";
+import InboxIcon from "@material-ui/icons/Inbox";
+import SearchBar from "material-ui-search-bar";
+import Hashtag from "./hashtag.png";
+
 function Chatbox() {
   return (
     <div className="chatbox">
       <header className="chatbox__header">
         <div className="chatbox__header__left">
           <h3>
-            <span className="chatbox__header__hash">#</span>
+            <img src={Hashtag} alt="hashtag" />
             main
           </h3>
         </div>
 
-        <div className="chatHeader__right">
-          <Notifications />
-          <EditLocationRounded />
-          <PeopleAltRounded />
+        <div className="chatbox__header__right">
+          <Notifications className="icons" />
+          <EditLocationRounded className="icons" />
+          <PeopleAltRounded className="icons" />
 
-          <div className="chatHeader__search">
-            <input placeholder="Search" type="text" />
-            <SearchRounded />
-          </div>
+          <SearchBar
+            // value={this.state.value}
+            // onChange={(newValue) => this.setState({ value: newValue })}
+            // onRequestSearch={() => doSomethingWith(this.state.value)}
+            // onChange={() => console.log("onChange")}
+            // onRequestSearch={() => console.log("onRequestSearch")}
+            inputProps={{
+              style: {
+                fontFamily: "Arial",
+                color: "white",
+                fontSize: "15px",
+                padding: "0px",
+              },
+            }}
+            style={{
+              maxWidth: 600,
+              width: 150,
+              height: 25,
+              backgroundColor: "#202225",
+            }}
+          />
 
-          <SendRounded />
-          <HelpRounded />
+          <InboxIcon className="icons" />
+          <HelpRounded className="icons" />
         </div>
       </header>
     </div>
