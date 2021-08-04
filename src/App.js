@@ -1,14 +1,12 @@
 import React from "react";
 import "./App.css";
 import Sidebar from "./components/sidebar/Sidebar";
-
+import Chatbox from "./components/chatbox/Chatbox";
 function App() {
   return (
-    <div className="App flex">
+    <div className="App">
       <Sidebar />
-      <h1 className="text-white flex w-3/4 bg-green-400">
-        Hey there! i'm chatbox
-      </h1>
+      <Chatbox />
     </div>
   );
 }

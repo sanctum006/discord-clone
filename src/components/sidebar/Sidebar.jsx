@@ -1,9 +1,9 @@
 import React from "react";
-
+import "./Sidebar.css";
 function Sidebar() {
   return (
-    <div className="flex flex-column h-screen bg-gray-500 text-white w-1/4">
-      Hello i'm sidebar
+    <div className="sidebar">
+      <h1>Hello i'm sidebar</h1>
     </div>
   );
 }
