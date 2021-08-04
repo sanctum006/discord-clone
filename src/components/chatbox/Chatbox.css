@@ -3,3 +3,24 @@
   height: 100vh;
   background-color: #36393f;
 }
+.chatbox__header {
+  height: 7vh;
+  background-color: #36393f;
+  border: 2px solid #2b2e32;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icons {
+  height: 20px;
+  width: 20px;
+  color: #dcddde;
+}
+.chatbox__header__hash {
+  color: #72767d;
+  font-weight: 500;
+}
+.chatbox__header__left h3 {
+  font-size: 30px;
+  font-weight: 100;
+}
