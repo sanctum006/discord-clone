@@ -7,6 +7,9 @@
   height: 7vh;
   background-color: #36393f;
   border: 2px solid #2b2e32;
+  border-top: none;
+  border-left: none;
+  border-right: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,18 +27,17 @@
   font-size: 30px;
   font-weight: 100;
   margin-left: 2%;
-  /* height: 30px; */
   display: flex;
   align-items: center;
 }
 .chatbox__header__left h3 {
-  font-size: 25px;
-  font-weight: 400;
-  padding-left: 10px;
+  font-size: 18px;
+  font-weight: 600;
   padding: 0;
+  padding-left: 2px;
+  padding-bottom: 2.5px;
   color: white;
   margin: 0;
-  padding: 0;
 }
 .chatbox__header__right {
   display: flex;
@@ -52,4 +54,7 @@
 }
 .searchbar {
   color: #626d75;
+}
+.hashtag {
+  margin-top: 10px;
 }
