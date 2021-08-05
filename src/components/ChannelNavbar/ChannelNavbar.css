@@ -41,7 +41,7 @@
 
 .channelNavbar__bottomConatainer {
   background-color: #292b2f;
-  padding: 8px 10px 7px;
+  padding: 8px 2px 8px 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -69,10 +69,27 @@
   color: #ccc;
   font-size: 0.8rem;
 }
-
-.channelNavbar__icons i {
-  margin: 7px 5px;
-  font-size: 1.1rem;
-  color: #bbb;
+.channelNavbar__icons {
+  width: 90px;
+  height: 35px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.channelNavbar__icons .icon {
+  /* margin: 7px 5px; */
+  font-size: 1.4rem;
+  color: #d7d8d9;
   cursor: pointer;
+}
+.channelNavbar__icons .icon:hover {
+  background-color: #35383e;
+}
+.mic {
+  position: relative;
+  bottom: 1px;
+}
+.settings {
+  position: relative;
+  bottom: 1px;
 }

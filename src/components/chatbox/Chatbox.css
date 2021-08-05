@@ -45,6 +45,7 @@
 .chatbox__header__right {
   display: flex;
   width: 40%;
+  min-width: 350px;
   justify-content: space-around;
 }
 .chatbox__header__search {
@@ -63,4 +64,10 @@
 }
 .chatbox__messagebox {
   margin: auto;
+}
+.pin {
+  position: relative;
+  bottom: -4px;
+  transform: rotate(45deg);
+  font-size: 20px;
 }

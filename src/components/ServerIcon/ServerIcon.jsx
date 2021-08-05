@@ -2,7 +2,7 @@ import React from "react";
 import "./ServerIcon.css";
 
 function ServerIcon({ name, imgUrl }) {
-  console.log(imgUrl);
+  // console.log(imgUrl);
   return (
     <div
       className="serverIcon__container tooltip"

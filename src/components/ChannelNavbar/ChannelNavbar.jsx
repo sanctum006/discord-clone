@@ -1,7 +1,9 @@
 import React from "react";
 import Channel from "../Channel/Channel";
 import "./ChannelNavbar.css";
-
+import MicOffIcon from "@material-ui/icons/MicOff";
+import HeadsetIcon from "@material-ui/icons/Headset";
+import SettingsIcon from "@material-ui/icons/Settings";
 function ChannelNavbar() {
   const channelSection = [
     {
@@ -54,9 +56,9 @@ function ChannelNavbar() {
           </div>
         </div>
         <div className="channelNavbar__icons">
-          <i class="fas fa-microphone-slash"></i>
-          <i class="fas fa-headphones-alt"></i>
-          <i class="fas fa-cog"></i>
+          <MicOffIcon className="icon mic" />
+          <HeadsetIcon className="icon" />
+          <SettingsIcon className="icon settings" />
         </div>
       </div>
     </div>

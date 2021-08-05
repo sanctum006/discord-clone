@@ -1,7 +1,6 @@
 import React from "react";
 import "./Chatbox.css";
 import {
-  EditLocationRounded,
   HelpRounded,
   Notifications,
   PeopleAltRounded,
@@ -21,7 +20,7 @@ function Chatbox() {
 
         <div className="chatbox__header__right">
           <Notifications className="icons" />
-          <EditLocationRounded className="icons" />
+          <i className="fas fa-thumbtack icons pin"></i>
           <PeopleAltRounded className="icons" />
 
           <SearchBar
@@ -49,7 +48,7 @@ function Chatbox() {
           <HelpRounded className="icons" />
         </div>
       </header>
-      <Messagebox className="chatbox__messagebox" />
+      <Messagebox />
     </div>
   );
 }
