@@ -1,0 +1,77 @@
+.channelNavbar__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.channelNavbar__topConatainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 6px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  transition: all 100ms ease-in;
+}
+
+.channelNavbar__topConatainer:hover {
+  background-color: #36393f;
+}
+
+.channelNavbar__heading {
+  color: white;
+  font-weight: 600;
+}
+
+.channelNavbar__btn {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.channelNavbar__btn i {
+  color: #ddd;
+}
+
+.channelNavbar__middleConatainer {
+  flex-grow: 1;
+}
+
+.channelNavbar__bottomConatainer {
+  background-color: #292b2f;
+  padding: 8px 10px 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.channelNavbar__user {
+  display: flex;
+}
+
+.channelNavbar__avatar {
+  width: 35px;
+  border-radius: 100px;
+  margin: 0 10px 0 0;
+}
+
+.channelNavbar__userInfo {
+  font-size: 0.9rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #ddd;
+}
+
+.channelNavbar__bio {
+  font-weight: 400;
+  color: #ccc;
+  font-size: 0.8rem;
+}
+
+.channelNavbar__icons i {
+  margin: 7px;
+  font-size: 1.1rem;
+  color: #bbb;
+  cursor: pointer;
+}

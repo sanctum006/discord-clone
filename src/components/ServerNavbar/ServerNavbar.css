@@ -1,7 +1,7 @@
 .serverNavbar__container {
   height: 100vh;
   width: 50px;
-  padding: 10px;
+  padding: 1px 10px;
   background-color: #202225;
 }
 
@@ -39,4 +39,49 @@
 
 .serverIcon__nav:hover {
   background-color: rgb(59, 165, 93);
+}
+
+.tooltip {
+  position: relative;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.384);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 12px;
+
+  /* Position the tooltip */
+  position: absolute;
+  left: 70px;
+  z-index: 1;
+  font-size: 1rem;
+  display: inline;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tt-border {
+  visibility: hidden;
+  position: absolute;
+  left: -10px;
+  width: 4px;
+  height: 30px;
+  background-color: wheat;
+  border-radius: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 0;
+}
+
+.tooltip:hover .tt-border {
+  visibility: visible;
 }
