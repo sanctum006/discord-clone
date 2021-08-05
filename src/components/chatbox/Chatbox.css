@@ -3,3 +3,53 @@
   height: 100vh;
   background-color: #36393f;
 }
+.chatbox__header {
+  height: 7vh;
+  background-color: #36393f;
+  border: 2px solid #2b2e32;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icons {
+  height: 20px;
+  width: 20px;
+  color: #b9bbbe;
+  cursor: pointer;
+}
+.icons:hover {
+  color: #dcddde;
+}
+.chatbox__header__left {
+  font-size: 30px;
+  font-weight: 100;
+  margin-left: 2%;
+  /* height: 30px; */
+  display: flex;
+  align-items: center;
+}
+.chatbox__header__left h3 {
+  font-size: 25px;
+  font-weight: 400;
+  padding-left: 10px;
+  padding: 0;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+.chatbox__header__right {
+  display: flex;
+  width: 40%;
+  justify-content: space-around;
+}
+.chatbox__header__search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ForwardRef-iconButton-2 {
+  color: #dcddde;
+}
+.searchbar {
+  color: #626d75;
+}
