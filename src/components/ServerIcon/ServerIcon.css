@@ -20,3 +20,20 @@
 .serverIcon__container:hover {
   border-radius: 17px;
 }
+
+.serverIcon__serverIconBorder {
+  position: absolute;
+  left: -10px;
+  width: 4px;
+  height: 10px;
+  background-color: wheat;
+  border-radius: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 0;
+  transition: all 100ms ease-in;
+}
+
+.tooltip:hover .serverIcon__serverIconBorder {
+  height: 22px;
+}
