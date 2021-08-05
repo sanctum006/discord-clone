@@ -9,7 +9,7 @@ import {
 import InboxIcon from "@material-ui/icons/Inbox";
 import SearchBar from "material-ui-search-bar";
 import Hashtag from "./hashtag.png";
-
+import Messagebox from "./Messagebox";
 function Chatbox() {
   return (
     <div className="chatbox">
@@ -49,6 +49,7 @@ function Chatbox() {
           <HelpRounded className="icons" />
         </div>
       </header>
+      <Messagebox className="chatbox__messagebox" />
     </div>
   );
 }

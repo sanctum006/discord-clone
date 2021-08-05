@@ -1,0 +1,26 @@
+.iconsmb {
+  background-color: #b9bbbe;
+  color: #40444b;
+  border-radius: 3px;
+  width: 30px;
+  height: 25px;
+  font-size: 25px;
+}
+.iconsmb:hover {
+  background-color: #dcddde;
+}
+.gift {
+  position: relative;
+  bottom: -3px;
+  height: 30px;
+}
+.sticker {
+  transform: rotateX(180deg);
+  position: relative;
+  bottom: -2px;
+}
+.emoji {
+  position: relative;
+  bottom: 3px;
+  right: 2px;
+}
