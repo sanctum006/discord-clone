@@ -19,7 +19,7 @@ function ServerNavbar() {
   ));
   return (
     <div className="serverNavbar__container">
-      <div className="serverIcon__homeContainer tooltip" title="Home">
+      <div className="serverIcon__homeContainer tooltip">
         <img
           src="https://cdn.discordapp.com/attachments/872515846625439824/872551512495255572/images-removebg-preview.png"
           alt=""

@@ -1,7 +1,37 @@
 import React from "react";
+import Channel from "../Channel/Channel";
 import "./ChannelNavbar.css";
 
 function ChannelNavbar() {
+  const channelSection = [
+    {
+      name: "WELCOME",
+      channels: [
+        { channelName: "welcome-note", type: "tc" },
+        { channelName: "self-roles", type: "tc" },
+        { channelName: "course-doubts", type: "tc" },
+        { channelName: "introduction", type: "vc" },
+      ],
+    },
+    {
+      name: "📢INFORMATION",
+      channels: [{ channelName: "announcements", type: "tc" }],
+    },
+    {
+      name: "GENERAL",
+      channels: [
+        { channelName: "🤘🏻main", type: "tc" },
+        { channelName: "📚resources", type: "tc" },
+        { channelName: "🏢-job-posting", type: "tc" },
+        { channelName: "📢 Mahasabha VC", type: "vc" },
+      ],
+    },
+  ];
+
+  const channels = channelSection.map((channel) => (
+    <Channel name={channel.name} channels={channel.channels} />
+  ));
+
   return (
     <div className="channelNavbar__container">
       <div className="channelNavbar__topConatainer">
@@ -10,7 +40,7 @@ function ChannelNavbar() {
           <i class="fas fa-chevron-down"></i>
         </button>
       </div>
-      <div className="channelNavbar__middleConatainer"></div>
+      <div className="channelNavbar__middleConatainer">{channels}</div>
       <div className="channelNavbar__bottomConatainer">
         <div className="channelNavbar__user">
           <img

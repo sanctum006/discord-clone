@@ -1,0 +1,50 @@
+.channel__container {
+  color: #aaa;
+  font-weight: 600;
+}
+
+.channel__containerName {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.channel__containerName i {
+  font-size: 0.5rem;
+  margin: 10px;
+}
+
+.channel__containerName:hover {
+  color: #eee;
+}
+
+.channel__channels {
+  padding: 5px;
+}
+
+.channel__container ul {
+  text-align: left;
+  padding: 0;
+}
+
+.channel__channelItem {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  font-size: 1.05rem;
+  cursor: pointer;
+  user-select: none;
+  color: rgb(114, 112, 112);
+  padding: 5px;
+}
+
+.channel__channelItem:hover {
+  color: #aaa;
+  background-color: rgb(54, 57, 63);
+  border-radius: 3px;
+}
+
+.channel__channelItem i {
+  margin: 0 10px;
+}

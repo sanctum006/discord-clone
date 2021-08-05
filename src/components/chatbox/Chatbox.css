@@ -1,5 +1,5 @@
 .chatbox {
-  flex: 0.75;
+  flex-grow: 1;
   height: 100vh;
   background-color: #36393f;
   display: flex;
@@ -7,7 +7,6 @@
   justify-content: space-between;
 }
 .chatbox__header {
-  height: 7vh;
   background-color: #36393f;
   border: 2px solid #2b2e32;
   border-top: none;
@@ -16,6 +15,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10.5px 0;
 }
 .icons {
   height: 20px;
