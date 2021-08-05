@@ -2,6 +2,9 @@
   flex-grow: 1;
   height: 100vh;
   background-color: #36393f;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .chatbox__header {
   height: 7vh;
@@ -57,4 +60,7 @@
 }
 .hashtag {
   margin-top: 10px;
+}
+.chatbox__messagebox {
+  margin: auto;
 }
