@@ -45,7 +45,6 @@ function Chatbox() {
               backgroundColor: "#202225",
             }}
           />
-
           <InboxIcon className="icons" />
           <HelpRounded className="icons" />
         </div>
