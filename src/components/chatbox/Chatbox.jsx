@@ -15,10 +15,8 @@ function Chatbox() {
     <div className="chatbox">
       <header className="chatbox__header">
         <div className="chatbox__header__left">
-          <h3>
-            <img src={Hashtag} alt="hashtag" />
-            main
-          </h3>
+          <img src={Hashtag} alt="hashtag" />
+          <h3>main</h3>
         </div>
 
         <div className="chatbox__header__right">
