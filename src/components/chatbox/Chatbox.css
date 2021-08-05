@@ -1,5 +1,5 @@
 .chatbox {
-  flex: 0.75;
+  flex-grow: 1;
   height: 100vh;
   background-color: #36393f;
 }
