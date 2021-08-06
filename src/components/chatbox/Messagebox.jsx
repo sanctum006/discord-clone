@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     width: "97%",
     margin: "0 auto",
-    marginBottom: "15px",
+    marginBottom: "20px",
     background: "#40444B",
     borderRadius: "8px",
     boxSizing: "border-box",
@@ -56,14 +56,7 @@ export default function Messagebox() {
         placeholder="Message #"
         inputProps={{ "aria-label": "search google maps" }}
       />
-      {/* <IconButton
-        type="submit"
-        className={classes.iconButton}
-        aria-label="search"
-      >
-        <SearchIcon />
-      </IconButton>
-      <Divider className={classes.divider} orientation="vertical" /> */}
+
       <IconButton
         color="primary"
         className={classes.iconButton}
@@ -71,7 +64,7 @@ export default function Messagebox() {
       >
         <i class="fas fa-gift icons gift"></i>
       </IconButton>
-      <Divider className={classes.divider} orientation="vertical" />
+      {/* <Divider className={classes.divider} orientation="vertical" /> */}
       <IconButton
         color="primary"
         className={classes.iconButton}
@@ -79,7 +72,7 @@ export default function Messagebox() {
       >
         <GifIcon className="iconsmb" />
       </IconButton>
-      <Divider className={classes.divider} orientation="vertical" />
+      {/* <Divider className={classes.divider} orientation="vertical" /> */}
       <IconButton
         color="primary"
         className={classes.iconButton}
@@ -87,7 +80,7 @@ export default function Messagebox() {
       >
         <i class="far fa-sticky-note icons sticker"></i>
       </IconButton>
-      <Divider className={classes.divider} orientation="vertical" />
+      {/* <Divider className={classes.divider} orientation="vertical" /> */}
       <IconButton
         color="primary"
         className={classes.iconButton}
@@ -95,7 +88,7 @@ export default function Messagebox() {
       >
         <i class="fas fa-smile-beam icons emoji"></i>
       </IconButton>
-      <Divider className={classes.divider} orientation="vertical" />
+      {/* <Divider className={classes.divider} orientation="vertical" /> */}
     </Paper>
   );
 }

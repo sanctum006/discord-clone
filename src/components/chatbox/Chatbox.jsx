@@ -1,7 +1,6 @@
 import React from "react";
 import "./Chatbox.css";
 import {
-  EditLocationRounded,
   HelpRounded,
   Notifications,
   PeopleAltRounded,
@@ -65,7 +64,7 @@ function Chatbox() {
           <HelpRounded className="icons" />
         </div>
       </header>
-      <Messagebox className="chatbox__messagebox" />
+      <Messagebox />
     </div>
   );
 }
