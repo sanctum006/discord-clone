@@ -132,3 +132,10 @@
 .channelNavbar__btns svg {
   margin: 2px 5px;
 }
+
+.channel__name {
+  position: relative;
+  left: 30px;
+  font-size: 0.95rem;
+  padding: 0 10px;
+}

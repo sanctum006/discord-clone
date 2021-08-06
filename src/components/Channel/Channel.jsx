@@ -14,21 +14,28 @@ function Channel({ name, channels, connected, setConnected }) {
         <div className="channel__channels">
           <ul>
             {channels.map((channel) => (
-              <li
-                className="channel__channelItem"
-                onClick={() => {
-                  channel.type === "vc"
-                    ? setConnected(true)
-                    : console.log("Nothing");
-                }}
-              >
-                {channel.type === "tc" ? (
-                  <i class="fas fa-hashtag"></i>
-                ) : (
-                  <i class="fas fa-volume-down"></i>
+              <div>
+                <li
+                  className="channel__channelItem"
+                  onClick={() => {
+                    channel.type === "vc"
+                      ? setConnected(true)
+                      : console.log("Nothing");
+                  }}
+                >
+                  {channel.type === "tc" ? (
+                    <i class="fas fa-hashtag"></i>
+                  ) : (
+                    <i class="fas fa-volume-down"></i>
+                  )}
+                  {channel.channelName}
+                </li>
+                {channel.type === "vc" && connected && (
+                  <li className="channel__channelItem channel__name">
+                    sanctum007
+                  </li>
                 )}
-                {channel.channelName}
-              </li>
+              </div>
             ))}
             {/* {connected && <li className="channel__channelItem">sanctum007</li>} */}
           </ul>

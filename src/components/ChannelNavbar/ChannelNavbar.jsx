@@ -13,7 +13,6 @@ function ChannelNavbar() {
         { channelName: "welcome-note", type: "tc" },
         { channelName: "self-roles", type: "tc" },
         { channelName: "course-doubts", type: "tc" },
-        { channelName: "introduction", type: "vc" },
       ],
     },
     {
