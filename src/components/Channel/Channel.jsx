@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Channel.css";
 
-function Channel({ name, channels }) {
+function Channel({ name, channels, connected, setConnected }) {
   const [state, setState] = useState(true);
   console.log(channels);
   return (
@@ -14,7 +14,14 @@ function Channel({ name, channels }) {
         <div className="channel__channels">
           <ul>
             {channels.map((channel) => (
-              <li className="channel__channelItem">
+              <li
+                className="channel__channelItem"
+                onClick={() => {
+                  channel.type === "vc"
+                    ? setConnected(true)
+                    : console.log("Nothing");
+                }}
+              >
                 {channel.type === "tc" ? (
                   <i class="fas fa-hashtag"></i>
                 ) : (
@@ -23,6 +30,7 @@ function Channel({ name, channels }) {
                 {channel.channelName}
               </li>
             ))}
+            {/* {connected && <li className="channel__channelItem">sanctum007</li>} */}
           </ul>
         </div>
       )}

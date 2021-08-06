@@ -53,7 +53,7 @@ export default function Messagebox() {
       </IconButton>
       <InputBase
         className={classes.input}
-        placeholder="Search Google Maps"
+        placeholder="Message #"
         inputProps={{ "aria-label": "search google maps" }}
       />
       {/* <IconButton

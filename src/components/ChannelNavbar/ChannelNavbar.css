@@ -76,3 +76,48 @@
   color: #bbb;
   cursor: pointer;
 }
+
+.channelNavbar__bottomContainerLine {
+  border: none;
+  border-top: 0.1px solid rgb(58, 58, 58);
+}
+
+.channelNavbar__bottomConatainer1 {
+  background-color: #292b2f;
+  padding: 10px 5px 5px 5px;
+}
+
+.channelNavbar__vc {
+  display: flex;
+  justify-content: space-between;
+}
+
+.channelNavbar__vcConnected {
+  color: #4fd65e;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+}
+
+.channelNavbar__vcOptions {
+  display: flex;
+}
+
+.channelNavbar__btns {
+  flex-grow: 1;
+  background-color: #36393f;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  padding: 3px 0;
+  color: #b9bbbe;
+  font-weight: 600;
+}
+
+.channelNavbar__btns svg {
+  margin: 2px 5px;
+}
