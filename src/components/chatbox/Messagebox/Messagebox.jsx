@@ -61,7 +61,7 @@ export default function Messagebox({ input, setInput }) {
 
     db.collection("channels").doc(channelId).collection("messages").add({
       message: input,
-      user: user.user,
+      user: user,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     });
 
@@ -75,7 +75,7 @@ export default function Messagebox({ input, setInput }) {
       </IconButton>
       <InputBase
         className={classes.input}
-        placeholder="Message #"
+        placeholder={`Message #${channelName}`}
         value={input}
         onChange={(e) => setInput(e.target.value)}
         inputProps={{ "aria-label": "search google maps" }}

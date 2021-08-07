@@ -72,11 +72,11 @@ function Channel({
                 {channel.type === "vc" && connected && (
                   <li className="channel__channelItem channel__name">
                     <img
-                      src={user.user?.photo}
+                      src={user.photo}
                       alt="avatar-img"
                       className="channel__avatar"
                     />
-                    {user.user?.displayName.split(" ")[0]}
+                    {user.displayName.split(" ")[0]}
                   </li>
                 )}
               </div>
