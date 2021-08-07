@@ -8,7 +8,8 @@ import {
 import InboxIcon from "@material-ui/icons/Inbox";
 import SearchBar from "material-ui-search-bar";
 import Hashtag from "./hashtag.png";
-import Messagebox from "./Messagebox";
+import Message from "./Message/Message";
+import Messagebox from "./Messagebox/Messagebox";
 function Chatbox() {
   return (
     <div className="chatbox">
@@ -64,6 +65,12 @@ function Chatbox() {
           <HelpRounded className="icons" />
         </div>
       </header>
+      <div className="chatbox__message__section">
+        <Message message="Hello world" />
+        <Message message="Hello Sanctum" />
+        <Message message="Chalo tumne pull karliya to ab kaam chalu kardo" />
+      </div>
+
       <Messagebox />
     </div>
   );

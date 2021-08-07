@@ -71,3 +71,9 @@
   transform: rotate(45deg);
   font-size: 20px;
 }
+.chatbox__message__section {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
