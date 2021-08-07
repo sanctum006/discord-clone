@@ -10,29 +10,25 @@ import SearchBar from "material-ui-search-bar";
 import Hashtag from "./hashtag.png";
 import Message from "./Message/Message";
 import Messagebox from "./Messagebox/Messagebox";
-<<<<<<< HEAD
 import { useSelector } from "react-redux";
 import { selectUser } from "../../features/counter/userSlice";
-
-function Chatbox() {
-  const user = useSelector(selectUser);
-=======
 import db from "../../firebase";
-function Chatbox({ channelId, channelName }) {
-  const [messages, setMessages] = useState([]);
-  const [input, setInput] = useState("");
-  useEffect(() => {
-    db.collection("channels")
-      .doc(channelId)
-      .collection("messages")
-      .orderBy("timestamp", "desc")
-      .onSnapshot((snapshot) => {
-        setMessages(snapshot.docs.map((doc) => doc.data()));
-        console.log(messages);
-      });
-  }, [channelId]);
 
->>>>>>> 161ed80e01dbfb013578804ef872f8d6fcd950e7
+function Chatbox({ channelId, channelName }) {
+  const user = useSelector(selectUser);
+  const [input, setInput] = useState("");
+  const [messages, setMessages] = useState([]);
+  useEffect(() => {
+    if (channelId) {
+      db.collection("channels")
+        .doc(channelId)
+        .collection("messages")
+        .orderBy("timestamp", "desc")
+        .onSnapshot((snapshot) => {
+          setMessages(snapshot.docs.map((doc) => doc.data()));
+        });
+    }
+  }, [channelId]);
   return (
     <div className="chatbox">
       <header className="chatbox__header">
