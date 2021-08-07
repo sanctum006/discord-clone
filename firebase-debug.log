@@ -1,0 +1,46 @@
+[debug] [2021-08-07T10:26:34.053Z] ----------------------------------------------------------------------
+[debug] [2021-08-07T10:26:34.056Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-08-07T10:26:34.056Z] CLI Version:   9.16.0
+[debug] [2021-08-07T10:26:34.056Z] Platform:      win32
+[debug] [2021-08-07T10:26:34.056Z] Node Version:  v14.17.0
+[debug] [2021-08-07T10:26:34.064Z] Time:          Sat Aug 07 2021 15:56:34 GMT+0530 (India Standard Time)
+[debug] [2021-08-07T10:26:34.064Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-08-07T10:26:34.067Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2021-08-07T10:26:34.087Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-08-07T10:26:34.088Z] > authorizing via signed-in user (harshityadav460@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\HP\OneDrive\Desktop\Development\React Projects\discord-clone
+
+[debug] [2021-08-07T10:27:55.886Z] ----------------------------------------------------------------------
+[debug] [2021-08-07T10:27:55.888Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-08-07T10:27:55.889Z] CLI Version:   9.16.0
+[debug] [2021-08-07T10:27:55.889Z] Platform:      win32
+[debug] [2021-08-07T10:27:55.889Z] Node Version:  v14.17.0
+[debug] [2021-08-07T10:27:55.890Z] Time:          Sat Aug 07 2021 15:57:55 GMT+0530 (India Standard Time)
+[debug] [2021-08-07T10:27:55.891Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-08-07T10:27:55.893Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2021-08-07T10:27:55.914Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-08-07T10:27:55.914Z] > authorizing via signed-in user (harshityadav460@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\HP\OneDrive\Desktop\Development\React Projects\discord-clone
+
+[debug] [2021-08-07T10:27:56.933Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2021-08-07T10:27:56.934Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}

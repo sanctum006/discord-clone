@@ -15,11 +15,7 @@ function ChannelNavbar() {
   const channelSection = [
     {
       name: "WELCOME",
-      channels: [
-        { channelName: "welcome-note", type: "tc" },
-        { channelName: "self-roles", type: "tc" },
-        { channelName: "course-doubts", type: "tc" },
-      ],
+      channels: [{ channelName: "welcome-note", type: "tc" }],
     },
     {
       name: "📢INFORMATION",
@@ -31,7 +27,6 @@ function ChannelNavbar() {
       channels: [
         { channelName: "🤘🏻main", type: "tc" },
         { channelName: "📚resources", type: "tc" },
-        { channelName: "🏢-job-posting", type: "tc" },
         { channelName: "📢 Mahasabha VC", type: "vc" },
       ],
     },
