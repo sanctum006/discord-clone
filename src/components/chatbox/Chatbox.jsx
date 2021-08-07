@@ -80,9 +80,9 @@ function Chatbox({ channelId, channelName }) {
         </div>
       </header>
       <div className="chatbox__message__section">
-        {messages.map((message) => (
-          <Message message={message.message} user={message.user} />
-        ))}
+        {messages.map((message) => {
+          return <Message message={message.message} user={message?.user} />;
+        })}
       </div>
 
       <Messagebox input={input} setInput={setInput} />

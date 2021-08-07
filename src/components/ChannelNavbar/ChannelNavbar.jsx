@@ -163,12 +163,12 @@ function ChannelNavbar() {
       <div className="channelNavbar__bottomConatainer">
         <div className="channelNavbar__user">
           <img
-            src={user.user?.photo}
+            src={user.photo}
             alt="avatar-img"
             className="channelNavbar__avatar"
           />
           <div className="channelNavbar__userInfo">
-            <p>{user.user?.displayName.split(" ")[0]}</p>
+            <p>{user.displayName.split(" ")[0]}</p>
             <p className="channelNavbar__bio">Chillin'</p>
           </div>
         </div>
