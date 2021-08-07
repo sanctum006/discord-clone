@@ -10,13 +10,6 @@ import SearchBar from "material-ui-search-bar";
 import Hashtag from "./hashtag.png";
 import Message from "./Message/Message";
 import Messagebox from "./Messagebox/Messagebox";
-<<<<<<< HEAD
-import { useSelector } from "react-redux";
-import { selectUser } from "../../features/counter/userSlice";
-
-function Chatbox() {
-  const user = useSelector(selectUser);
-=======
 import db from "../../firebase";
 function Chatbox({ channelId, channelName }) {
   const [messages, setMessages] = useState([]);
@@ -32,7 +25,6 @@ function Chatbox({ channelId, channelName }) {
       });
   }, [channelId]);
 
->>>>>>> 161ed80e01dbfb013578804ef872f8d6fcd950e7
   return (
     <div className="chatbox">
       <header className="chatbox__header">
