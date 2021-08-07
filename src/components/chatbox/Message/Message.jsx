@@ -5,10 +5,10 @@ import "./Message.css";
 function Message({ message, timestamp, user }) {
   return (
     <div className="message">
-      {/* <Avatar src={user.photo} /> */}
+      <Avatar src={user?.photo} />
       <div className="message__info">
         <h4>
-          {/* {user.displayName} */}
+          {user?.displayName}
           {/* <span className="message__timestamp">
             {new Date(timestamp?.toDate()).toUTCString()}
           </span> */}
