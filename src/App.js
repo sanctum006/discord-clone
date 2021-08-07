@@ -14,13 +14,8 @@ import {
 function App() {
   const dispatch = useDispatch();
   const user = useSelector(selectUser);
-<<<<<<< HEAD
-=======
-
   const channelId = useSelector(selectChannelId);
   const channelName = useSelector(selectChannelName);
->>>>>>> 161ed80e01dbfb013578804ef872f8d6fcd950e7
-
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       if (authUser) {
