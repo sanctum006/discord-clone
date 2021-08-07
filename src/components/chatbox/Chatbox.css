@@ -77,4 +77,5 @@
   flex-direction: column;
   justify-content: flex-end;
   overflow: auto;
+  width: 100%;
 }
