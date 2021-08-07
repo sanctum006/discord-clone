@@ -6,6 +6,7 @@ import HeadsetIcon from "@material-ui/icons/Headset";
 import SettingsIcon from "@material-ui/icons/Settings";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../features/counter/userSlice";
+import RealChannel from "./../Channel/RealChannel";
 import db from "../../firebase";
 function ChannelNavbar() {
   const [connected, setConnected] = useState(true);
@@ -24,6 +25,16 @@ function ChannelNavbar() {
       name: "📢INFORMATION",
       channels: [{ channelName: "announcements", type: "tc" }],
     },
+    {
+      name: "GENERAL",
+      type: true,
+      channels: [
+        { channelName: "🤘🏻main", type: "tc" },
+        { channelName: "📚resources", type: "tc" },
+        { channelName: "🏢-job-posting", type: "tc" },
+        { channelName: "📢 Mahasabha VC", type: "vc" },
+      ],
+    },
   ];
 
   useEffect(() => {
@@ -36,19 +47,6 @@ function ChannelNavbar() {
       );
     });
   }, []);
-
-  const actualChannelSection = [
-    {
-      name: "GENERAL",
-      type: true,
-      channels: [
-        { channelName: "🤘🏻main", type: "tc" },
-        { channelName: "📚resources", type: "tc" },
-        { channelName: "🏢-job-posting", type: "tc" },
-        { channelName: "📢 Mahasabha VC", type: "vc" },
-      ],
-    },
-  ];
 
   const channelss = channelSection.map((channel) => (
     <Channel
@@ -69,17 +67,10 @@ function ChannelNavbar() {
       </div>
       <div className="channelNavbar__middleConatainer">
         {channelss}
-        {actualChannelSection.map((channel) => (
-          <Channel
-            name={channel.name}
-            channels={channel.channels}
-            connected={connected}
-            setConnected={setConnected}
-            type={channel.type}
-            channelList={actualChannelSection}
-          />
-        ))}
-        ;
+        {/* {channels.map(({ id, channel }) => (
+          <h1 key={channel}>{channel.channelName}</h1>
+        ))} */}
+        <RealChannel channels={channels} />
       </div>
       {connected && (
         <div className="channelNavbar__bottomConatainer1">
@@ -172,12 +163,12 @@ function ChannelNavbar() {
       <div className="channelNavbar__bottomConatainer">
         <div className="channelNavbar__user">
           <img
-            src={user.user.photo}
+            src={user.user?.photo}
             alt="avatar-img"
             className="channelNavbar__avatar"
           />
           <div className="channelNavbar__userInfo">
-            <p>{user.user.displayName.split(" ")[0]}</p>
+            <p>{user.user?.displayName.split(" ")[0]}</p>
             <p className="channelNavbar__bio">Chillin'</p>
           </div>
         </div>

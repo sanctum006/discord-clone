@@ -6,11 +6,17 @@ import { useDispatch, useSelector } from "react-redux";
 import { login, logout, selectUser } from "./features/counter/userSlice";
 import Login from "./components/Login/Login";
 import { auth } from "./firebase";
+import {
+  selectChannelId,
+  selectChannelName,
+} from "./features/counter/appSlice";
 
 function App() {
   const dispatch = useDispatch();
   const user = useSelector(selectUser);
-  console.log(user);
+
+  const channelId = useSelector(selectChannelId);
+  const channelName = useSelector(selectChannelName);
 
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
@@ -35,7 +41,7 @@ function App() {
       {user ? (
         <>
           <Sidebar />
-          <Chatbox />
+          <Chatbox channelId={channelId} channelName={channelName} />
         </>
       ) : (
         <Login />

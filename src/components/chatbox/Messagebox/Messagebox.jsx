@@ -5,7 +5,15 @@ import InputBase from "@material-ui/core/InputBase";
 import IconButton from "@material-ui/core/IconButton";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
 import GifIcon from "@material-ui/icons/Gif";
+import firebase from "firebase";
 import "./Messagebox.css";
+import db from "../../../firebase";
+import { useSelector } from "react-redux";
+import {
+  selectChannelId,
+  selectChannelName,
+} from "../../../features/counter/appSlice";
+import { selectUser } from "../../../features/counter/userSlice";
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: "2px 4px",
@@ -42,17 +50,34 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Messagebox() {
+export default function Messagebox({ input, setInput }) {
   const classes = useStyles();
+  const channelId = useSelector(selectChannelId);
+  const channelName = useSelector(selectChannelName);
+  const user = useSelector(selectUser);
+
+  const sendMessage = (e) => {
+    e.preventDefault();
+
+    db.collection("channels").doc(channelId).collection("messages").add({
+      message: input,
+      user: user.user,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+    });
+
+    setInput("");
+  };
 
   return (
-    <Paper component="form" className={classes.root}>
+    <Paper component="form" className={classes.root} onSubmit={sendMessage}>
       <IconButton className={classes.iconButton} aria-label="menu">
         <AddCircleIcon className="icons" />
       </IconButton>
       <InputBase
         className={classes.input}
         placeholder="Message #"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
         inputProps={{ "aria-label": "search google maps" }}
       />
 
