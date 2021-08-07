@@ -10,7 +10,6 @@ import { auth } from "./firebase";
 function App() {
   const dispatch = useDispatch();
   const user = useSelector(selectUser);
-  console.log(user);
 
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
@@ -23,7 +22,6 @@ function App() {
             displayName: authUser.displayName,
           })
         );
-        console.log(user);
       } else {
         dispatch(logout());
       }

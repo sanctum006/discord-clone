@@ -10,7 +10,11 @@ import SearchBar from "material-ui-search-bar";
 import Hashtag from "./hashtag.png";
 import Message from "./Message/Message";
 import Messagebox from "./Messagebox/Messagebox";
+import { useSelector } from "react-redux";
+import { selectUser } from "../../features/counter/userSlice";
+
 function Chatbox() {
+  const user = useSelector(selectUser);
   return (
     <div className="chatbox">
       <header className="chatbox__header">
