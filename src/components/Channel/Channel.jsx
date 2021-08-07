@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../features/counter/userSlice";
+import db from "../../firebase";
 import "./Channel.css";
 
 function Channel({
@@ -16,6 +17,12 @@ function Channel({
 
   const addChannel = () => {
     const channelName = prompt("Enter Channel Name: ");
+
+    if (channelName) {
+      db.collection("channels").add({
+        channelName: channelName,
+      });
+    }
   };
 
   return (
@@ -65,11 +72,11 @@ function Channel({
                 {channel.type === "vc" && connected && (
                   <li className="channel__channelItem channel__name">
                     <img
-                      src={user.user.photo}
+                      src={user.user?.photo}
                       alt="avatar-img"
                       className="channel__avatar"
                     />
-                    {user.user.displayName.split(" ")[0]}
+                    {user.user?.displayName.split(" ")[0]}
                   </li>
                 )}
               </div>

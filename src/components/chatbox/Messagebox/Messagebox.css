@@ -24,3 +24,7 @@
   bottom: 3px;
   right: 2px;
 }
+
+.messageBox__form {
+  width: 100%;
+}

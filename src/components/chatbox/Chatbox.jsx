@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Chatbox.css";
 import {
   HelpRounded,
@@ -10,17 +10,35 @@ import SearchBar from "material-ui-search-bar";
 import Hashtag from "./hashtag.png";
 import Message from "./Message/Message";
 import Messagebox from "./Messagebox/Messagebox";
+<<<<<<< HEAD
 import { useSelector } from "react-redux";
 import { selectUser } from "../../features/counter/userSlice";
 
 function Chatbox() {
   const user = useSelector(selectUser);
+=======
+import db from "../../firebase";
+function Chatbox({ channelId, channelName }) {
+  const [messages, setMessages] = useState([]);
+  const [input, setInput] = useState("");
+  useEffect(() => {
+    db.collection("channels")
+      .doc(channelId)
+      .collection("messages")
+      .orderBy("timestamp", "desc")
+      .onSnapshot((snapshot) => {
+        setMessages(snapshot.docs.map((doc) => doc.data()));
+        console.log(messages);
+      });
+  }, [channelId]);
+
+>>>>>>> 161ed80e01dbfb013578804ef872f8d6fcd950e7
   return (
     <div className="chatbox">
       <header className="chatbox__header">
         <div className="chatbox__header__left">
           <img src={Hashtag} alt="hashtag" />
-          <h3>main</h3>
+          <h3>{channelName}</h3>
         </div>
 
         <div className="chatbox__header__right">
@@ -70,12 +88,12 @@ function Chatbox() {
         </div>
       </header>
       <div className="chatbox__message__section">
-        <Message message="Hello world" />
-        <Message message="Hello Sanctum" />
-        <Message message="Chalo tumne pull karliya to ab kaam chalu kardo" />
+        {messages.map((message) => (
+          <Message message={message.message} user={message.user} />
+        ))}
       </div>
 
-      <Messagebox />
+      <Messagebox input={input} setInput={setInput} />
     </div>
   );
 }
