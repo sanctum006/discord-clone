@@ -7,7 +7,14 @@
   font-size: 0.8rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   cursor: pointer;
+  padding-right: 20px;
+}
+
+.channel__containerName div {
+  display: flex;
+  align-items: center;
 }
 
 .channel__containerName i {
@@ -47,4 +54,10 @@
 
 .channel__channelItem i {
   margin: 0 10px;
+}
+
+.channel__avatar {
+  width: 20px;
+  border-radius: 100%;
+  margin: 0 10px 0 0px;
 }

@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Channel from "../Channel/Channel";
 import "./ChannelNavbar.css";
 import MicOffIcon from "@material-ui/icons/MicOff";
 import HeadsetIcon from "@material-ui/icons/Headset";
 import SettingsIcon from "@material-ui/icons/Settings";
+import { useSelector } from "react-redux";
+import { selectUser } from "../../features/counter/userSlice";
+import db from "../../firebase";
 function ChannelNavbar() {
   const [connected, setConnected] = useState(true);
+  const user = useSelector(selectUser);
+  const [channels, setChannels] = useState([]);
   const channelSection = [
     {
       name: "WELCOME",
@@ -19,8 +24,23 @@ function ChannelNavbar() {
       name: "📢INFORMATION",
       channels: [{ channelName: "announcements", type: "tc" }],
     },
+  ];
+
+  useEffect(() => {
+    db.collection("channels").onSnapshot((snapshot) => {
+      setChannels(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          channel: doc.data(),
+        }))
+      );
+    });
+  }, []);
+
+  const actualChannelSection = [
     {
       name: "GENERAL",
+      type: true,
       channels: [
         { channelName: "🤘🏻main", type: "tc" },
         { channelName: "📚resources", type: "tc" },
@@ -30,7 +50,7 @@ function ChannelNavbar() {
     },
   ];
 
-  const channels = channelSection.map((channel) => (
+  const channelss = channelSection.map((channel) => (
     <Channel
       name={channel.name}
       channels={channel.channels}
@@ -47,7 +67,20 @@ function ChannelNavbar() {
           <i class="fas fa-chevron-down"></i>
         </button>
       </div>
-      <div className="channelNavbar__middleConatainer">{channels}</div>
+      <div className="channelNavbar__middleConatainer">
+        {channelss}
+        {actualChannelSection.map((channel) => (
+          <Channel
+            name={channel.name}
+            channels={channel.channels}
+            connected={connected}
+            setConnected={setConnected}
+            type={channel.type}
+            channelList={actualChannelSection}
+          />
+        ))}
+        ;
+      </div>
       {connected && (
         <div className="channelNavbar__bottomConatainer1">
           <div className="channelNavbar__vc">
@@ -139,12 +172,12 @@ function ChannelNavbar() {
       <div className="channelNavbar__bottomConatainer">
         <div className="channelNavbar__user">
           <img
-            src="https://i.pinimg.com/736x/ef/de/78/efde78cc09aeece4b344c689b6e84ead.jpg"
+            src={user.user.photo}
             alt="avatar-img"
             className="channelNavbar__avatar"
           />
           <div className="channelNavbar__userInfo">
-            <p>sanctum007</p>
+            <p>{user.user.displayName.split(" ")[0]}</p>
             <p className="channelNavbar__bio">Chillin'</p>
           </div>
         </div>
