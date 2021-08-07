@@ -14,10 +14,8 @@ import {
 function App() {
   const dispatch = useDispatch();
   const user = useSelector(selectUser);
-
   const channelId = useSelector(selectChannelId);
   const channelName = useSelector(selectChannelName);
-
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       if (authUser) {
@@ -29,7 +27,6 @@ function App() {
             displayName: authUser.displayName,
           })
         );
-        console.log(user);
       } else {
         dispatch(logout());
       }
