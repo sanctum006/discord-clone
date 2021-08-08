@@ -56,6 +56,8 @@ export default function Messagebox({ input, setInput }) {
   const channelName = useSelector(selectChannelName);
   const user = useSelector(selectUser);
 
+  let objDiv = document.querySelector(".chatbox__message__section");
+
   const sendMessage = (e) => {
     e.preventDefault();
 
@@ -64,6 +66,10 @@ export default function Messagebox({ input, setInput }) {
       user: user,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     });
+
+    setTimeout(() => {
+      objDiv.scrollTop = objDiv.scrollHeight;
+    }, 1000);
 
     setInput("");
   };
