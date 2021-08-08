@@ -63,16 +63,13 @@ export default function Messagebox({ input, setInput }) {
   const sendMessage = (e) => {
     e.preventDefault();
 
-    db.collection("channels").doc(channelId).collection("messages").add({
-      message: input,
-      user: user,
-      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-    });
-
-    setTimeout(() => {
-      objDiv.scrollTop = objDiv.scrollHeight;
-    }, 200);
-
+    if (input) {
+      db.collection("channels").doc(channelId).collection("messages").add({
+        message: input,
+        user: user,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      });
+    }
     setInput("");
   };
 

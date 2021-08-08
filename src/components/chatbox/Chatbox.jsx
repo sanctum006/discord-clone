@@ -32,6 +32,33 @@ function Chatbox({ channelId, channelName }) {
 
   let objDiv = document.querySelector(".chatbox__message__section");
 
+<<<<<<< HEAD
+=======
+  useEffect(() => {
+    setTimeout(() => {
+      document.querySelector(".chatbox__message__section").scrollTop =
+        document.querySelector(".chatbox__message__section").scrollHeight;
+    }, 1000);
+  }, []);
+
+  // document
+  //   .querySelector(".chatbox__message__section")
+  //   .addEventListener("load", () => {
+  //     alert("Hello");
+  //   });
+
+  // const sendMessage = (e) => {
+  //   e.preventDefault();
+
+  //   db.collection('channels').doc(channelId).collection('messages').add({
+  //     timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+  //     message: messageInput,
+  //     user,
+  //   });
+
+  //   setMessageInput('');
+  // };
+>>>>>>> 6d01dc974bcb9712e702a8e1fb7f95000bbdc87f
   return (
     <div className="chatbox">
       <header className="chatbox__header">
