@@ -29,6 +29,17 @@ function Chatbox({ channelId, channelName }) {
         });
     }
   }, [channelId]);
+  // const sendMessage = (e) => {
+  //   e.preventDefault();
+
+  //   db.collection('channels').doc(channelId).collection('messages').add({
+  //     timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+  //     message: messageInput,
+  //     user,
+  //   });
+
+  //   setMessageInput('');
+  // };
   return (
     <div className="chatbox">
       <header className="chatbox__header">
@@ -84,9 +95,17 @@ function Chatbox({ channelId, channelName }) {
         </div>
       </header>
       <div className="chatbox__message__section">
-        {messages.map((message) => {
-          return <Message message={message.message} user={message?.user} />;
-        })}
+        {messages
+          .slice(0)
+          .reverse()
+          .map((message, index) => (
+            <Message
+              key={index}
+              message={message.message}
+              timestamp={message.timestamp}
+              user={message.user}
+            />
+          ))}
       </div>
 
       <Messagebox input={input} setInput={setInput} />

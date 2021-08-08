@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 import { selectUser } from "../../features/counter/userSlice";
 import RealChannel from "./../Channel/RealChannel";
 import db from "../../firebase";
+import { auth } from "../../firebase";
 function ChannelNavbar() {
   const [connected, setConnected] = useState(true);
   const user = useSelector(selectUser);
@@ -170,7 +171,10 @@ function ChannelNavbar() {
         <div className="channelNavbar__icons">
           <MicOffIcon className="icon mic" />
           <HeadsetIcon className="icon" />
-          <SettingsIcon className="icon settings" />
+          <SettingsIcon
+            className="icon settings"
+            onClick={() => auth.signOut()}
+          />
         </div>
       </div>
     </div>
