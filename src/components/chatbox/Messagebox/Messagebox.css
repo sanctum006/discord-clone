@@ -16,13 +16,10 @@
 }
 .sticker {
   transform: rotateX(180deg);
-  position: relative;
-  bottom: -2px;
 }
 .emoji {
   position: relative;
-  bottom: 3px;
-  right: 2px;
+  right: 3px;
 }
 
 .messageBox__form {

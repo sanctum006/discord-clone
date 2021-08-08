@@ -14,7 +14,7 @@ import {
   selectChannelName,
 } from "../../../features/counter/appSlice";
 import { selectUser } from "../../../features/counter/userSlice";
-import Emoji from "../Emoji/Emoji";
+// import Emoji from "../Emoji/Emoji";
 
 const useStyles = makeStyles((theme) => ({
   root: {

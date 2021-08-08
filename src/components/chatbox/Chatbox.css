@@ -18,8 +18,8 @@
   padding: 10.5px 0;
 }
 .icons {
-  height: 20px;
-  width: 20px;
+  height: 25px;
+  width: 25px;
   color: #b9bbbe;
   cursor: pointer;
 }
@@ -47,6 +47,7 @@
   width: 40%;
   min-width: 350px;
   justify-content: space-around;
+  align-items: center;
 }
 .chatbox__header__search {
   display: flex;
