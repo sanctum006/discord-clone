@@ -32,8 +32,6 @@ function Chatbox({ channelId, channelName }) {
 
   let objDiv = document.querySelector(".chatbox__message__section");
 
-<<<<<<< HEAD
-=======
   useEffect(() => {
     setTimeout(() => {
       document.querySelector(".chatbox__message__section").scrollTop =
@@ -58,7 +56,6 @@ function Chatbox({ channelId, channelName }) {
 
   //   setMessageInput('');
   // };
->>>>>>> 6d01dc974bcb9712e702a8e1fb7f95000bbdc87f
   return (
     <div className="chatbox">
       <header className="chatbox__header">
