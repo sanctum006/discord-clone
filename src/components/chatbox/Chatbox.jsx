@@ -32,17 +32,6 @@ function Chatbox({ channelId, channelName }) {
 
   let objDiv = document.querySelector(".chatbox__message__section");
 
-  // const sendMessage = (e) => {
-  //   e.preventDefault();
-
-  //   db.collection('channels').doc(channelId).collection('messages').add({
-  //     timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-  //     message: messageInput,
-  //     user,
-  //   });
-
-  //   setMessageInput('');
-  // };
   return (
     <div className="chatbox">
       <header className="chatbox__header">

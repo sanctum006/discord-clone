@@ -71,7 +71,7 @@ export default function Messagebox({ input, setInput }) {
 
     setTimeout(() => {
       objDiv.scrollTop = objDiv.scrollHeight;
-    }, 1000);
+    }, 200);
 
     setInput("");
   };
