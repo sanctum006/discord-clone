@@ -32,6 +32,19 @@ function Chatbox({ channelId, channelName }) {
 
   let objDiv = document.querySelector(".chatbox__message__section");
 
+  useEffect(() => {
+    setTimeout(() => {
+      document.querySelector(".chatbox__message__section").scrollTop =
+        document.querySelector(".chatbox__message__section").scrollHeight;
+    }, 1000);
+  }, []);
+
+  // document
+  //   .querySelector(".chatbox__message__section")
+  //   .addEventListener("load", () => {
+  //     alert("Hello");
+  //   });
+
   // const sendMessage = (e) => {
   //   e.preventDefault();
 
