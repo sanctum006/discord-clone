@@ -29,6 +29,7 @@ function Chatbox({ channelId, channelName }) {
         });
     }
   }, [channelId]);
+
   // const sendMessage = (e) => {
   //   e.preventDefault();
 
