@@ -14,6 +14,8 @@ import {
   selectChannelName,
 } from "../../../features/counter/appSlice";
 import { selectUser } from "../../../features/counter/userSlice";
+import Emoji from "../Emoji/Emoji";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: "2px 4px",
@@ -113,6 +115,13 @@ export default function Messagebox({ input, setInput }) {
         <i class="fas fa-smile-beam icons emoji"></i>
       </IconButton>
       {/* <Divider className={classes.divider} orientation="vertical" /> */}
+      {/* <IconButton
+        color="primary"
+        className={classes.iconButton}
+        aria-label="directions"
+      >
+        <Emoji className="icons emoji" />
+      </IconButton> */}
     </Paper>
   );
 }
