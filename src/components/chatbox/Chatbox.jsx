@@ -30,6 +30,8 @@ function Chatbox({ channelId, channelName }) {
     }
   }, [channelId]);
 
+  let objDiv = document.querySelector(".chatbox__message__section");
+
   // const sendMessage = (e) => {
   //   e.preventDefault();
 
@@ -107,6 +109,7 @@ function Chatbox({ channelId, channelName }) {
               user={message.user}
             />
           ))}
+        {console.log(objDiv ? (objDiv.scrollTop = objDiv?.scrollHeight) : null)}
       </div>
 
       <Messagebox input={input} setInput={setInput} />
