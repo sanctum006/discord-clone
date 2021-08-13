@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import InputBase from "@material-ui/core/InputBase";
@@ -14,7 +14,7 @@ import {
   selectChannelName,
 } from "../../../features/counter/appSlice";
 import { selectUser } from "../../../features/counter/userSlice";
-// import Emoji from "../Emoji/Emoji";
+import Emoji from "../Emoji/Emoji";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -57,6 +57,8 @@ export default function Messagebox({ input, setInput }) {
   const channelId = useSelector(selectChannelId);
   const channelName = useSelector(selectChannelName);
   const user = useSelector(selectUser);
+  const [chosenEmoji, setChosenEmoji] = useState({ emoji: "" });
+  const [state, setState] = useState(false);
 
   let objDiv = document.querySelector(".chatbox__message__section");
 
@@ -73,58 +75,76 @@ export default function Messagebox({ input, setInput }) {
     setInput("");
   };
 
-  return (
-    <Paper component="form" className={classes.root} onSubmit={sendMessage}>
-      <IconButton className={classes.iconButton} aria-label="menu">
-        <AddCircleIcon className="icons" />
-      </IconButton>
-      <InputBase
-        className={classes.input}
-        placeholder={`Message #${channelName}`}
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        inputProps={{ "aria-label": "search google maps" }}
-      />
+  const changeState = () => {
+    setState((s) => !s);
+  };
 
-      <IconButton
-        color="primary"
-        className={classes.iconButton}
-        aria-label="directions"
-      >
-        <i class="fas fa-gift icons gift"></i>
-      </IconButton>
-      {/* <Divider className={classes.divider} orientation="vertical" /> */}
-      <IconButton
-        color="primary"
-        className={classes.iconButton}
-        aria-label="directions"
-      >
-        <GifIcon className="iconsmb" />
-      </IconButton>
-      {/* <Divider className={classes.divider} orientation="vertical" /> */}
-      <IconButton
-        color="primary"
-        className={classes.iconButton}
-        aria-label="directions"
-      >
-        <i class="far fa-sticky-note icons sticker"></i>
-      </IconButton>
-      {/* <Divider className={classes.divider} orientation="vertical" /> */}
-      <IconButton
-        color="primary"
-        className={classes.iconButton}
-        aria-label="directions"
-      >
-        <i class="fas fa-smile-beam icons emoji"></i>
-      </IconButton>
-      {/* <Divider className={classes.divider} orientation="vertical" /> */}
-      {/* <IconButton
+  return (
+    <div>
+      {state && (
+        <div style={{ position: "absolute", bottom: "80px", right: "20px" }}>
+          <Emoji
+            chosenEmoji={chosenEmoji}
+            setChosenEmoji={setChosenEmoji}
+            input={input}
+            setInput={setInput}
+          />
+        </div>
+      )}
+
+      <Paper component="form" className={classes.root} onSubmit={sendMessage}>
+        <IconButton className={classes.iconButton} aria-label="menu">
+          <AddCircleIcon className="icons" />
+        </IconButton>
+        <InputBase
+          className={classes.input}
+          placeholder={`Message #${channelName}`}
+          onChange={(e) => {
+            setInput(e.target.value);
+          }}
+          value={input}
+          inputProps={{ "aria-label": "search google maps" }}
+        />
+        <IconButton
+          color="primary"
+          className={classes.iconButton}
+          aria-label="directions"
+        >
+          <i class="fas fa-gift icons gift"></i>
+        </IconButton>
+        {/* <Divider className={classes.divider} orientation="vertical" /> */}
+        <IconButton
+          color="primary"
+          className={classes.iconButton}
+          aria-label="directions"
+        >
+          <GifIcon className="iconsmb" />
+        </IconButton>
+        {/* <Divider className={classes.divider} orientation="vertical" /> */}
+        <IconButton
+          color="primary"
+          className={classes.iconButton}
+          aria-label="directions"
+        >
+          <i class="far fa-sticky-note icons sticker"></i>
+        </IconButton>
+        {/* <Divider className={classes.divider} orientation="vertical" /> */}
+        <IconButton
+          color="primary"
+          className={classes.iconButton}
+          aria-label="directions"
+        >
+          <i onClick={changeState} class="fas fa-smile-beam icons emoji"></i>
+        </IconButton>
+        {/* <Divider className={classes.divider} orientation="vertical" /> */}
+        {/* <IconButton
         color="primary"
         className={classes.iconButton}
         aria-label="directions"
       >
         <Emoji className="icons emoji" />
       </IconButton> */}
-    </Paper>
+      </Paper>
+    </div>
   );
 }

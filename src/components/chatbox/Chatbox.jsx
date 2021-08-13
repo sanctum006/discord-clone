@@ -36,8 +36,20 @@ function Chatbox({ channelId, channelName }) {
     setTimeout(() => {
       document.querySelector(".chatbox__message__section").scrollTop =
         document.querySelector(".chatbox__message__section").scrollHeight;
-    }, 1000);
+    }, 2000);
   }, []);
+
+  // useEffect(() => {
+  //   window.addEventListener("click", () => {
+  //     setEmojiState((s) => -1000);
+  //   });
+  //   return () => {
+  //     window.removeEventListener("click", () => {
+  //       setEmojiState((s) => -1000);
+  //     });
+  //   };
+  // }, []);
+
   return (
     <div className="chatbox">
       <header className="chatbox__header">
@@ -143,7 +155,6 @@ function Chatbox({ channelId, channelName }) {
           ))}
         {console.log(objDiv ? (objDiv.scrollTop = objDiv?.scrollHeight) : null)}
       </div>
-
       <Messagebox input={input} setInput={setInput} />
     </div>
   );
