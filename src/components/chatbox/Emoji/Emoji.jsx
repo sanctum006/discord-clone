@@ -11,7 +11,7 @@ function Emoji({ chosenEmoji, setChosenEmoji, input, setInput }) {
   }, [chosenEmoji]);
 
   return (
-    <div style={{ backgroundColor: "red" }}>
+    <div>
       {/* {chosenEmoji ? (
         <span>You chose: {chosenEmoji.emoji}</span>
       ) : (
