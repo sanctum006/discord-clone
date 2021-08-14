@@ -15,7 +15,7 @@ function Channel({
   const [state, setState] = useState(true);
   const user = useSelector(selectUser);
 
-  const addChannel = () => {
+  const adChan = () => {
     const channelName = prompt("Enter Channel Name: ");
 
     if (channelName) {
@@ -34,7 +34,7 @@ function Channel({
         </div>
         {type && (
           <svg
-            onClick={addChannel}
+            onClick={adChan}
             class="circleIcon-1-oi1i"
             aria-hidden="false"
             width="24"
