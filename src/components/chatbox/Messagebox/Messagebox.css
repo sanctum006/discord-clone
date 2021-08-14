@@ -15,7 +15,7 @@
   height: 30px;
 }
 .sticker {
-  transform: rotateX(180deg);
+  width: 22px;
 }
 .emoji {
   position: relative;
