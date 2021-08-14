@@ -82,6 +82,7 @@ function Channel({ channels, type, setConnected, connected }) {
         onClose={handleClose}
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
+        className="middle"
       >
         <div className="modal__container">
           <div
