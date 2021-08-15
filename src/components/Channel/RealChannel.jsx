@@ -5,6 +5,7 @@ import db from "../../firebase";
 import { setChannelInfo } from "../../features/counter/appSlice";
 import "./Channel.css";
 import { Modal } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 
 function Channel({ channels, type, setConnected, connected }) {
   const [state, setState] = useState(true);
@@ -29,7 +30,14 @@ function Channel({ channels, type, setConnected, connected }) {
       setChannelName("");
     }
   };
-
+  const useStyles = makeStyles((theme) => ({
+    modal: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    },
+  }));
+  const classes = useStyles();
   return (
     <div className="channel__container">
       <h1 className="channel__containerName">
@@ -82,7 +90,7 @@ function Channel({ channels, type, setConnected, connected }) {
         onClose={handleClose}
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
-        className="middle"
+        className={classes.modal}
       >
         <div className="modal__container">
           <div
