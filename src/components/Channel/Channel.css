@@ -156,3 +156,60 @@
 .cross:hover {
   color: #dcddde;
 }
+@media screen and (min-width: 1900px) {
+  .modal__container {
+    max-width: 600px;
+  }
+  .modal__topContainer {
+    padding: 20px;
+    padding-top: 10px;
+  }
+
+  .modal__topContainer h1 {
+    font-size: 2.5rem;
+  }
+
+  .modal__topContainer p {
+    font-size: 1.5rem;
+  }
+
+  .modal__middleContainer {
+    padding: 20px;
+  }
+
+  .modal__middleContainer h1 {
+    font-size: 1.1rem;
+  }
+
+  .modal__middleContainer input {
+    font-size: 1.3rem;
+    /* padding: 10px 5px; */
+  }
+
+  .modal__middleContainerInpBox {
+    padding: 10px 10px;
+    margin: 20px 0 15px 0;
+    box-sizing: border-box;
+  }
+
+  .modal__middleContainerInpBox svg {
+    margin-right: 5px;
+  }
+
+  .modal__bottomContainer {
+    padding: 17px 20px;
+    font-size: 1.5rem;
+  }
+
+  .modal__bottomContainer button {
+    margin: 0px 0 0 20px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 15px 15px;
+    border-radius: 5px;
+  }
+  .cross {
+    width: 35px;
+    height: 35px;
+  }
+}
