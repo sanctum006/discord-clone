@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/discord-clone/static/css/main.27cbffc2.chunk.css",
+    "main.js": "/discord-clone/static/js/main.d9486787.chunk.js",
+    "main.js.map": "/discord-clone/static/js/main.d9486787.chunk.js.map",
+    "runtime-main.js": "/discord-clone/static/js/runtime-main.a66f7279.js",
+    "runtime-main.js.map": "/discord-clone/static/js/runtime-main.a66f7279.js.map",
+    "static/js/2.b6d9e0d5.chunk.js": "/discord-clone/static/js/2.b6d9e0d5.chunk.js",
+    "static/js/2.b6d9e0d5.chunk.js.map": "/discord-clone/static/js/2.b6d9e0d5.chunk.js.map",
+    "index.html": "/discord-clone/index.html",
+    "static/css/main.27cbffc2.chunk.css.map": "/discord-clone/static/css/main.27cbffc2.chunk.css.map",
+    "static/js/2.b6d9e0d5.chunk.js.LICENSE.txt": "/discord-clone/static/js/2.b6d9e0d5.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a66f7279.js",
+    "static/js/2.b6d9e0d5.chunk.js",
+    "static/css/main.27cbffc2.chunk.css",
+    "static/js/main.d9486787.chunk.js"
+  ]
+}
